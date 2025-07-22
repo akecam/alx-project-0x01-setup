@@ -1,7 +1,12 @@
-import React from "react";
+import Header from "@/components/layout/Header";
 
-const index = () => {
-  return <div>index</div>;
+const Users = () => {
+  return (
+    <div>
+      <Header />
+      <p>Users</p>
+    </div>
+  );
 };
 
-export default index;
+export default Users;
