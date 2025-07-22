@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import UserCard from "@/components/common/UserCard";
-import { UserData, UserProps } from "@/interfaces";
+import { UserProps } from "@/interfaces";
 import posts from "../posts";
 
 const Users: React.FC<UserProps[]> = ({ posts }) => {

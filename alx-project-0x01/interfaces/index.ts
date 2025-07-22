@@ -5,7 +5,7 @@ export interface PostProps {
   body: string;
 }
 
-export interface UserData {
+export interface UserProps {
   id: number;
   name: string;
   username: string;
