@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import UserCard from "@/components/common/UserCard";
-import { UserProps } from "@/interfaces";
+import { UserData, UserProps } from "@/interfaces";
 import posts from "../posts";
 
 const Users: React.FC<UserProps[]> = ({ posts }) => {
@@ -8,30 +8,9 @@ const Users: React.FC<UserProps[]> = ({ posts }) => {
     <div>
       <Header />
 
-      {posts.map(
-        ({
-          id,
-          name,
-          username,
-          email,
-          address,
-          phone,
-          website,
-          company,
-        }: UserProps) => (
-          <UserCard
-            name={name}
-            key={id}
-            id={id}
-            username={username}
-            email={email}
-            address={address}
-            phone={phone}
-            website={website}
-            company={company}
-          />
-        )
-      )}
+      {posts.map((user: UserProps) => (
+        <UserCard {...user} key={user.id} />
+      ))}
     </div>
   );
 };
