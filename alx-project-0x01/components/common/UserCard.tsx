@@ -1,4 +1,4 @@
-import { Address, Company, Geo, UserProps } from "@/interfaces";
+import { UserProps } from "@/interfaces";
 import Image from "next/image";
 import profile_avatar from "@/public/assets/images/profile_avatar.svg";
 
