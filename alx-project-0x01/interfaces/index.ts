@@ -1,3 +1,7 @@
+import UserCard from "@/components/common/UserCard";
+import { error } from "console";
+import { Infer } from "next/dist/compiled/superstruct";
+
 export interface PostProps {
   userId: number;
   id: number;
@@ -45,4 +49,25 @@ export interface PostData {
 export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: PostData) => void;
+}
+
+export interface UserData {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+  website: string;
+}
+
+export interface AddressData {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+}
+
+export interface UserModalProps {
+  onClose: () => void;
+  onSubmit: (user: UserData) => void;
 }
